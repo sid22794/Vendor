@@ -1,0 +1,85 @@
+/* For Desktop */
+
+@media (min-width:1024px) {}
+
+
+/* For Tablets and ipads  */
+
+@media(min-width:769px) and (max-width:1023px) {
+    .login .offset-3 {
+        margin-left: unset;
+    }
+}
+
+
+/* For Mobile */
+
+@media(max-width:768px) {
+    .login .offset-3 {
+        margin-left: unset;
+    }
+    .navbar li .text-dark {
+        color: #0A0A0A !important;
+    }
+    /* navbar css for mobile start */
+    .nav-toggler {
+        display: block;
+        z-index: 5;
+    }
+    .site-navbar {
+        min-height: 60px;
+    }
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 60px);
+        left: 0;
+        top: 60px;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, .75);
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s;
+        z-index: 4;
+    }
+    .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+    .site-navbar ul li a {
+        padding: 20px;
+        color: #fff;
+    }
+    .site-navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, .1);
+    }
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+    }
+    .intro-area h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    /* navbar css for mobile end */
+}
+
+@media(max-width:468px) {
+    .myOrder .myOrderheader>div {
+        flex-basis: 50%;
+    }
+    .myOrder .orderDetail>div>img {
+        border-radius: 6px;
+        width: 100%;
+    }
+    .myOrder .orderDetail .description {
+        position: relative;
+        top: 0;
+    }
+    .myOrder .orderDetail {
+        display: inherit;
+        justify-content: inherit;
+        padding: 20px 10px 10px 10px;
+    }
+}

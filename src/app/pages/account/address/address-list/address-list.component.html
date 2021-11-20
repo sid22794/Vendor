@@ -1,0 +1,62 @@
+<section class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-class">
+                  <h2>your Address</h2>
+                </div>
+              </div>
+              <div class="choosefile cursor-pointer" [routerLink]="['add']">
+                <i class="bi bi-plus"></i>
+                <input type="file" disabled id="file" />
+                <label for="file">Add Address</label>
+              </div>
+
+              <div class="dfaultaddress">
+                <div>
+                  <h6 class="text-muted">Default Address</h6>
+                  <strong>John Doe</strong>
+                  <address>Dummy Address
+                    Lorem Ipsum Sit Amet<br>
+                    <strong>Dummy Pin:</strong>302033<br>
+                    <strong>Telephone:</strong>1-800-123-4567
+                  </address>
+                  <ul>
+                    <li>Edit</li>
+                    <li>|</li>
+                    <li>Remove</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dfaultaddress">
+                <div>
+
+                  <strong>John Doe</strong>
+                  <address>Dummy Address
+                    Lorem Ipsum Sit Amet<br>
+                    <strong>Dummy Pin:</strong>302033<br>
+                    <strong>Telephone:</strong>1-800-123-4567
+                  </address>
+                  <ul>
+                    <li>Edit</li>
+                    <li>|</li>
+                    <li>Remove</li>
+                    <li>|</li>
+                    <li>Set as Default</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <button type="button" class="sendbtn">DONE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
