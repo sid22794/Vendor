@@ -1,0 +1,50 @@
+<main id="main">
+
+  <div *ngIf="helperService.isToastVisible"
+    class="show align-items-center text-white bg-primary border-0 position-fixed top-0 end-0 " role="alert"
+    aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        {{helperService.toastMessage}}.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+        (click)="helperService.hideToastMessage()" aria-label="Close"></button>
+    </div>
+  </div>
+
+  <div class="mini_header">
+    <div class="container align-items-center justify-content-between">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-12 d-flex align-items-center justify-content-between">
+          <div class="topicon">
+            <a href="javascript:void(0)">
+              <i class="bi bi-search"></i>
+            </a>
+            <a href="javascript:void(0)">
+              <i class="bi bi-geo-alt"></i>
+            </a>
+          </div>
+          <div class="login_area">
+            <button *ngIf="!(getUserDetails()?.username)" type="button" [routerLink]="['/auth/login']"
+              class="btn">Login</button>
+            <button *ngIf="!(getUserDetails()?.username)" type="button" [routerLink]="['/auth/signup']" class="btn">Sign
+              UP</button>
+            <a *ngIf="getUserDetails()?.username" href="/your-account" [routerLink]="['/your-account']"><i
+                class="bi bi-person"></i></a>
+            <a *ngIf="getUserDetails()?.username" href="/cart" [routerLink]="['/cart']"> <i class="bi bi-cart"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-header></app-header>
+
+  <router-outlet></router-outlet>
+
+</main>
+
+<app-footer></app-footer>
+
+<a *ngIf="windowScrolled" href="javascript:void(0)" (click)="scrollToTop()"
+  class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>

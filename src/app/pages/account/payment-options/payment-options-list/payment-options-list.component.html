@@ -1,0 +1,57 @@
+<section class="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-class">
+                  <h2> Payment Options</h2>
+                </div>
+              </div>
+              <div class="choosefile cursor-pointer" [routerLink]="['add']">
+                <i class="bi bi-plus"></i>
+                <input type="file" disabled id="file" />
+                <label for="file">Add New Payment Method</label>
+              </div>
+
+              <div class="dfaultaddress">
+                <div>
+                  <h6 class="text-muted" style="margin: 0;">Default Payment Method</h6>
+                  <i class="ri-visa-line visa"></i>
+                  <address>ICICI Debit Card ending in xxxx<br>
+                    <strong>Expires:</strong>07/27
+                  </address>
+                  <ul>
+                    <li>Edit</li>
+                    <li>|</li>
+                    <li>Remove</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dfaultaddress">
+                <div style="padding-top: 0;">
+                  <i class="ri-visa-line visa"></i>
+                  <address>ICICI Debit Card ending in xxxx<br>
+                    <strong>Expires:</strong>07/27
+                  </address>
+                  <ul>
+                    <li>Edit</li>
+                    <li>|</li>
+                    <li>Remove</li>
+                    <li>|</li>
+                    <li>Set as Default</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <button type="button" class="sendbtn">DONE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
